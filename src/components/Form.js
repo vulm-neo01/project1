@@ -3,6 +3,7 @@ import React from 'react';
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
 
     const inputTextHandler = (e) => {
+        e.preventDefault();
         setInputText(e.target.value);
     };
     const submitTodoHandler = (e) => {
@@ -23,9 +24,9 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
                 value={inputText} 
                 onChange={inputTextHandler} 
                 type="text" 
-                className="todo-input">
+                className="form-input">
             </input>
-            <button onClick={submitTodoHandler} className="todo-button" type="submit">
+            <button onClick={submitTodoHandler} className="form-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
             <div className='select'>

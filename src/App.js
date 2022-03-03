@@ -5,6 +5,7 @@ import "./App.css";
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 
+
 function App(){
 
     const [inputText, setInputText] = useState("");
@@ -15,7 +16,7 @@ function App(){
     useEffect(() => {
         getLocalTodos();
     }, []);
-    
+
     useEffect(() => {
         filterHandler();
         saveLocalTodos();
@@ -50,7 +51,7 @@ function App(){
     return(
         <div className="App">
             <header>
-                <h1>LMV's Todo List</h1>
+                <h1>Your Todo-List</h1>
             </header>
             <Form
                 inputText={inputText}
@@ -64,6 +65,7 @@ function App(){
                 setTodos={setTodos}
                 todos={todos}
             />
+
         </div>
     );
 }

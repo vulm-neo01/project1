@@ -4,13 +4,16 @@
     box-sizing: border-box;
   }
   body {
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-image: linear-gradient(120deg, #a6f5a4 0%, #38e738 100%);
     color: white;
-    font-family: "Poppins", sans-serif;
+    font-family: "Verdana", sans-serif;
     min-height: 100vh;
   }
   header {
-    font-size: 2rem;
+    font-size: 35px;
+    border: 2px solid rgb(239, 243, 239);
+    border-radius: 10px;
+    background-color: rgb(241, 126, 18);
   }
   
   header,
@@ -23,9 +26,11 @@
   form input,
   form button {
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 25px;
+    height: 60px;
     border: none;
     background: white;
+    border-radius: 2px;
   }
   form button {
     color: #ff6f47;
@@ -44,22 +49,25 @@
   }
   
   .todo-list {
-    min-width: 30%;
+    min-width: 40%;
     list-style: none;
   }
   
   .todo {
     margin: 0.5rem;
     background: white;
-    font-size: 1.5rem;
-    color: black;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
+    border-radius: 5px;
   }
   .filter-todo {
+    font-size: 15px;
     padding: 1rem;
+    border-radius: 2px;
   }
   .todo li {
     flex: 1;
@@ -79,16 +87,6 @@
   }
   .todo-item {
     padding: 0rem 0.5rem;
-  }
-  
-  .fa-trash,
-  .fa-check {
-    pointer-events: none;
-  }
-  
-  .fall {
-    transform: translateY(10rem) rotateZ(20deg);
-    opacity: 0;
   }
   
   .completed {
@@ -116,9 +114,9 @@
   }
   select {
     color: #ff6f47;
-    font-family: "Poppins", sans-serif;
+    font-family: "Verdana", sans-serif;
     cursor: pointer;
-    width: 12rem;
+    width: 15rem;
   }
   /* Arrow */
   .select::after {
@@ -130,9 +128,4 @@
     background: #ff6f47;
     cursor: pointer;
     pointer-events: none;
-  }
-  /* Transition */
-
-  .select:hover::after {
-    transform: scale(1.5);
   }
